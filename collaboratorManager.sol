@@ -1,4 +1,4 @@
-pragma solidity ^0.4.26;
+pragma solidity ^0.5.12;
 
 /// @title collaboratorManager
 /// @notice this contract manages a list of collaborators for a project
@@ -29,7 +29,7 @@ contract collaboratorManager {
     address[] public entityList;
     
     /// @notice creates a new collaborator unless a collaborator address already is registered
-    function newEntity(address _address, string organization, string fName, string lName) public payable returns(bool creationSuccess){
+    function newEntity(address _address, string memory organization, string memory fName, string memory lName) public payable returns(bool creationSuccess){
         if(isEntity(_address)) revert();
         entityStructs[_address].organization = organization;
         entityStructs[_address].fName = fName;
@@ -39,7 +39,7 @@ contract collaboratorManager {
     }
 
     /// @notice updates an existing collaborator unless an unregistered address is specified
-    function updateEntity(address _address, string organization, string fName, string lName) public payable returns(bool updateSuccess) {
+    function updateEntity(address _address, string memory organization, string memory fName, string memory lName) public payable returns(bool updateSuccess) {
         if (!isEntity(_address)) {
             revert();
         }
@@ -65,7 +65,7 @@ contract collaboratorManager {
     }
     
     /// @dev we can return the entityList to another contract if we want to make this into a proxy contract
-    function getCollaborators() public view returns(address[]){
+    function getCollaborators() public view returns(address[] memory){
         return entityList;
     }
 
