@@ -67,6 +67,6 @@ contract gitMultiSig {
 
     function gitMultiSigCommit(uint _m) public view returns(bool gitCommitted) {
         /// @notice function performs an m of n test OR a super user signed test. if _m == signers then that means that everyone has to sign.
-        return (_m <= signers || superUserSigned);
+        return ((_m <= hasSigned.length) || superUserSigned);
     }
 }
