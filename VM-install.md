@@ -25,7 +25,7 @@ $ mkdir -p /mnt/disk1 && mkdir /mnt/disk2         # folders for mountpoint
 Setup the automount:
 
 ```bash
-$ cp /etc/fstab /etc/fstab.old  # optional backup of fstab
+$ cp /etc/fstab /etc/fstab.old  # https://help.ubuntu.com/community/Fstab
 $ lsblk -o NAME,UUID
 ...
 vdb
