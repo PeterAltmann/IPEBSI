@@ -20,7 +20,7 @@ vdb     252:16   0 1000G  0 disk
 ├─vdb1  252:17   0  100G  0 part
 └─vdb2  252:18   0  300G  0 part
 $ mkfs.ext4 /dev/vdb1 && mkfs.ext4 /dev/vdb2
-$ mkdir /mnt/disk1 && mkdir /mnt/disk2         # folders for mountpoint
+$ mkdir -p /mnt/disk1 && mkdir /mnt/disk2         # folders for mountpoint
 ```
 Setup the automount:
 
