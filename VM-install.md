@@ -4,6 +4,10 @@ These instructions are for setting up a replica of the full stack EBSI node. It 
 
 ## VM setup using Ubuntu 18.04 LTS
 
+* Parted docs: https://www.gnu.org/software/parted/manual/html_chapter/parted_2.html
+* Fstab docs: https://help.ubuntu.com/community/Fstab
+
+
 Prepare the system:
 ```bash
 $ sudo su                         # switch to super user
@@ -25,7 +29,7 @@ $ mkdir -p /mnt/disk1 && mkdir /mnt/disk2         # folders for mountpoint
 Setup the automount:
 
 ```bash
-$ cp /etc/fstab /etc/fstab.old  # https://help.ubuntu.com/community/Fstab
+$ cp /etc/fstab /etc/fstab.old  # backup fstab
 $ lsblk -o NAME,UUID
 ...
 vdb
