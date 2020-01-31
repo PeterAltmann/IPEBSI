@@ -4,7 +4,7 @@ These instructions are for setting up a replica of the full stack EBSI node. It 
 
 ## VM setup using Ubuntu 18.04 LTS
 
-Prepare the system
+Prepare the system:
 ```bash
 $ sudo su                         # switch to super user
 $ apt update && apt upgrade -y    # update and upgrade system
@@ -22,7 +22,7 @@ vdb     252:16   0 1000G  0 disk
 $ mkfs.ext4 /dev/vdb1 && mkfs.ext4 /dev/vdb2
 $ mkdir /mnt/disk1 && mkdir /mnt/disk2         # folders for mountpoint
 ```
-Setup the automount
+Setup the automount:
 
 ```bash
 $ cp /etc/fstab /etc/fstab.old  # optional backup of fstab
@@ -34,7 +34,7 @@ vdb
 $ echo "UUID=3ed7beb9-64a5-408c-9231-62d3fdccaf73 /mnt/disk1 ext4 defaults 0 0" >> /etc/fstab
 $ echo "UUID=b19c6b4a-3ab0-4499-9188-8a152d0adc33 /mnt/disk1 ext4 defaults 0 0" >> /etc/fstab
 ```
-Mount the disks and check
+Mount the disks and check:
 ```bash
 $ mount -a && df -h -x tmpfs | grep mnt
 /dev/vdb1        98G   61M   93G   1% /mnt/disk1
