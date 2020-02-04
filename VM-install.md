@@ -118,6 +118,7 @@ $ hostname # check if it worked
 
 ## SSH config for RISE ICE
 
+* See https://ecc.north.sics.se/about for details on environment
 * Get your key file, e.g., \*.pem
 * Assumes that you have VM installed
 
