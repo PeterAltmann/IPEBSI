@@ -40,7 +40,8 @@ $ echo "UUID=b19c6b4a-3ab0-4499-9188-8a152d0adc33 /mnt/disk1 ext4 defaults 0 0" 
 ```
 Mount the disks and check:
 ```bash
-$ mount -a && df -h -x tmpfs | grep mnt
+$ mount -a
+$ df -h -x tmpfs | grep mnt
 /dev/vdb1        98G   61M   93G   1% /mnt/disk1
 /dev/vdb2       295G   65M  280G   1% /mnt/disk2
 ```
