@@ -1,4 +1,4 @@
-# VM install instructions for the EBSI full stack node
+# VM install instructions for testing the EBSI full stack node
 
 These instructions are for setting up a replica of the full stack EBSI node. It will be updated as information becomes available.
 
