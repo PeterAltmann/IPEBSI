@@ -25,7 +25,7 @@ def get_ports():
 		'Ethereum (Besu) leger (Syncro Service)': 48733,
 		'Cockpit': 48790,
 		'Cassandra DB': 7000,
-		'NGINX (HTTPS Traffic)': 443	
+		'NGINX (HTTPS Traffic)': 443
 	}
 
 def is_port_open(ip,port):
@@ -49,16 +49,20 @@ for host in hosts:
 	logging.debug(host)
 	connected = []
 	disconnected = []
-	
+
 	for port in ports:
 		if is_port_open(host, ports[port]):
 			connected.append(port)
 		else:
 			disconnected.append(port)
-			
+
 	result['ebsi_connectivity'][host] = {'connected': connected, 'disconnected':disconnected}
 
 result['test_end'] =str(datetime.now())
 
 logging.info('Please paste the following line to support.')
 logging.info(json.dumps(result) + "\n")
+
+path = socket.gethostname() + "_port_check.txt"
+with open(path, "w") as f:
+	f.write(json.dumps(result, indent = 4, sort_keys=True) + "\n")
