@@ -5,7 +5,6 @@
 # Outputs connectivity result every 10 second with epoch time.
 
 PORT=$2
-T=$(date +%s)
 
 if [[ "$2" = "" ]] ;
 then
@@ -21,17 +20,18 @@ fi
 
 if [[ "$1" = "apps" ]] ;
 then
-  HOST=<IP>
+  HOST=213.21.96.188
 elif [[ "$1" = "besu" ]] ;
 then
-  HOST=<IP>
+  HOST=213.21.96.189
 else
-  HOST=<IP>
+  HOST=213.21.96.190
 fi
 
 echo "Testing $1 at port $2 ..."
 for (( c=1; c<=500; c++ ))
 do
+  T=$(date +%s)
   echo "At Unix Time $T : nc -zv $1 at $HOST:$PORT"
   nc -zv $HOST $PORT
   sleep 10
