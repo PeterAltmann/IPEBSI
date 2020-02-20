@@ -21,12 +21,12 @@ fi
 
 if [[ "$1" = "apps" ]] ;
 then
-  HOST=213.21.96.188
+  HOST=<IP>
 elif [[ "$1" = "besu" ]] ;
 then
-  HOST=213.21.96.189
+  HOST=<IP>
 else
-  HOST=213.21.96.190
+  HOST=<IP>
 fi
 
 echo "Testing $1 at port $2 ..."
