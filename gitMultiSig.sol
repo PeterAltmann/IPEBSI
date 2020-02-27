@@ -1,9 +1,5 @@
 pragma solidity ^0.5.12;
 
-/// @title A multisig inspired git commit approver
-/// @author Peter Altmann
-/// @notice This contract is meant to showcase some basic options
-/// @dev The setSigner function should be replaced with a proxy that calls a collaborator management contract, which returns address[] and superUser address.
 contract gitMultiSig {
     uint signers;
     address[] notSigned;
@@ -22,10 +18,6 @@ contract gitMultiSig {
     }
     
     function setSigner() testSigner public {
-        /// @notice since we do not import "mapping (address => colaboratorStruct) collaborators", we need a way to create a list of collaborators.
-        /// @param signList Solidity cannot loop through arrays, so we need to create a mapping to be able to check if someone is already registered.
-        /// @param notSigned is an address array with addresses who have not yet signed off on the git commit.
-        /// @param signers countes total number of signers.
         signList[msg.sender] = true;
         notSigned.push(msg.sender);
         signers ++;
@@ -48,6 +40,7 @@ contract gitMultiSig {
         /// @dev signList[address] == true; can be an alternative to for loop but introduces delete problems. Internal function call can be an alternative.
         /// @dev no check implemented for trying to create multiple signatures.
         /// @returns vote outcome
+        require (signList[msg.sender]);
         signedList[msg.sender] = true;
         for (uint i = 0; i < notSigned.length; i++) {
             if (msg.sender == notSigned[i]) {
