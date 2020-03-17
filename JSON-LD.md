@@ -1,8 +1,49 @@
-# Syntax
+# JSON-LD
+
+- A JSON-LD describes an edge-labeled directed graph data model.
+- The graph contains vertices connected by directed edges.
+- Each vertice is either a resource (things/entities in the world) with properties, or the data values of those properties.
+- Vertices are resources.
+- Unnamed nodes, i.e., "blank nodes," are those not identified by an [IRI](https://tools.ietf.org/html/rfc3987#section-2).
+- [Literals](https://www.w3.org/TR/rdf11-concepts/#dfn-literal) are considered resources.
+- Node objects represent zero or more properties of a node in a graph.
+
+## Syntax tokens and keywords
+
+Full details available [here](https://www.w3.org/TR/json-ld11/#syntax-tokens-and-keywords).
+
+`:` separator for key value pairs.
+`@base` defines the base IRI for the document
+`@container` sets default container type for a [term](https://www.w3.org/TR/json-ld11/#terms).
+`@context` defines short-hand names (i.e., [terms](https://www.w3.org/TR/json-ld11/#terms)) used throughout the JSON-LD document. Defined more in depth [here](https://www.w3.org/TR/json-ld11/#the-context).
+`@direction` WIP.
+`@graph` expresses a [graph](https://www.w3.org/TR/json-ld11/#named-graphs).
+`@id` used to uniquely identify node objects described in the document with IRIs or blank node identifiers. Desribed in detail [here](https://www.w3.org/TR/json-ld11/#node-identifiers).
+`@import` WIP.
+`@included` WIP.
+`@index` WIP.
+`@json` WIP.
+`@language` specifies language for particular string value or JSON-LD document.
+`@list` expresses an ordered set of data. Details [here](https://www.w3.org/TR/json-ld11/#lists).
+`@nest` WIP.
+`@none` WIP.
+`@prefix` WIP.
+`@propagate` WIP.
+`@protected` WIP.
+`@reverse` WIP.
+`@set` WIP.
+`@type` WIP.
+`@value` WIP.
+`@version` WIP.
+`@vocab` WIP.
+
+# Guide
 
 Inspired from:
 - https://moz.com/blog/writing-structured-data-guide
 - https://www.w3.org/TR/json-ld11/
+- https://www.w3.org/TR/ld-glossary/
+- https://www.w3.org/TR/rdf11-concepts/
 
 ## Curly braces
 
