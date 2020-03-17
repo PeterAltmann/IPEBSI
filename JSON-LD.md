@@ -12,34 +12,35 @@
 
 Full details available [here](https://www.w3.org/TR/json-ld11/#syntax-tokens-and-keywords).
 
-`:` separator for key value pairs.
-`@base` defines the base IRI for the document
-`@container` sets default container type for a [term](https://www.w3.org/TR/json-ld11/#terms).
-`@context` defines short-hand names (i.e., [terms](https://www.w3.org/TR/json-ld11/#terms)) used throughout the JSON-LD document. Defined more in depth [here](https://www.w3.org/TR/json-ld11/#the-context).
-`@direction` WIP.
-`@graph` expresses a [graph](https://www.w3.org/TR/json-ld11/#named-graphs).
-`@id` used to uniquely identify node objects described in the document with IRIs or blank node identifiers. Desribed in detail [here](https://www.w3.org/TR/json-ld11/#node-identifiers).
-`@import` WIP.
-`@included` WIP.
-`@index` WIP.
-`@json` WIP.
-`@language` specifies language for particular string value or JSON-LD document.
-`@list` expresses an ordered set of data. Details [here](https://www.w3.org/TR/json-ld11/#lists).
-`@nest` WIP.
-`@none` WIP.
-`@prefix` WIP.
-`@propagate` WIP.
-`@protected` WIP.
-`@reverse` WIP.
-`@set` WIP.
-`@type` WIP.
-`@value` WIP.
-`@version` WIP.
-`@vocab` WIP.
+- `:` separator for key value pairs.
+- `@base` defines the base IRI for the document
+- `@container` sets default container type for a [term](https://www.w3.org/TR/json-ld11/#terms).
+- `@context` defines short-hand names (i.e., [terms](https://www.w3.org/TR/json-ld11/#terms)) used throughout the JSON-LD document. Defined more in depth [here](https://www.w3.org/TR/json-ld11/#the-context).
+- `@direction` WIP.
+- `@graph` expresses a [graph](https://www.w3.org/TR/json-ld11/#named-graphs).
+- `@id` used to uniquely identify node objects described in the document with IRIs or blank node identifiers. Desribed in detail [here](https://www.w3.org/TR/json-ld11/#node-identifiers).
+- `@import` WIP.
+- `@included` WIP.
+- `@index` WIP.
+- `@json` WIP.
+- `@language` specifies language for particular string value or JSON-LD document.
+- `@list` expresses an ordered set of data. Details [here](https://www.w3.org/TR/json-ld11/#lists).
+- `@nest` WIP.
+- `@none` WIP.
+- `@prefix` WIP.
+- `@propagate` WIP.
+- `@protected` WIP.
+- `@reverse` WIP.
+- `@set` WIP.
+- `@type` WIP.
+- `@value` WIP.
+- `@version` WIP.
+- `@vocab` WIP.
 
 # Guide
 
 Inspired from:
+
 - https://moz.com/blog/writing-structured-data-guide
 - https://www.w3.org/TR/json-ld11/
 - https://www.w3.org/TR/ld-glossary/
