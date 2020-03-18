@@ -7,6 +7,78 @@
 - Unnamed nodes, i.e., "blank nodes," are those not identified by an [IRI](https://tools.ietf.org/html/rfc3987#section-2).
 - [Literals](https://www.w3.org/TR/rdf11-concepts/#dfn-literal) are considered resources.
 - Node objects represent zero or more properties of a node in a graph.
+- Conformance information [found here](https://www.w3.org/TR/json-ld11/#conformance).
+- Linked data uses IRIs [(Internationalized Resource Identifiers)](https://www.w3.org/TR/json-ld11/#basic-concepts) for unambiguous identifiers to data. 
+- Using an IRI, we can go to a source to get a definition of the term (aka IRI dereferencing).
+
+## JSON vs JSON-LD
+
+```
+{
+  "name": "Manu Sporny",
+  "homepage": "http://manu.sporny.org/",
+  "image": "http://manu.sporny.org/images/manu.png"
+}
+```
+
+The above is a JSON document. 
+
+```
+{
+  "http://schema.org/name": "Manu Sporny",
+  "http://schema.org/url": {
+    "@id": "http://manu.sporny.org/"
+    ↑ The '@id' keyword means 'This value is an identifier that is an IRI'
+  },
+  "http://schema.org/image": {
+    "@id": "http://manu.sporny.org/images/manu.png"
+  }
+}
+```
+
+The example above is a JSON-LD. Here, each property is unambiguously identified using IRI, and all values representing IRIs are marked using `@id`. 
+
+### Context
+
+To avoid verbose descriptions, JSON-LD uses a [context](https://www.w3.org/TR/json-ld11/#the-context) to map terms to IRIs.
+
+```
+{
+  "@context": {
+    "name": "http://schema.org/name",
+    ↑ This means that 'name' is shorthand for 'http://schema.org/name'
+    "image": {
+      "@id": "http://schema.org/image",
+      ↑ This means that 'image' is shorthand for 'http://schema.org/image'
+      "@type": "@id"
+      ↑ This means that a string value associated with 'image'
+        should be interpreted as an identifier that is an IRI
+    },
+    "homepage": {
+      "@id": "http://schema.org/url",
+      ↑ This means that 'homepage' is shorthand for 'http://schema.org/url'
+      "@type": "@id"
+      ↑ This means that a string value associated with 'homepage'
+        should be interpreted as an identifier that is an IRI 
+    }
+  }
+  "name": "<some name>",
+  "homepage": "<some IRI, e.g., URL or doi or magnet link>",
+  "image": "<some IRI, can be URL or doi or magnet link>"
+}
+```
+
+The context can also be references using jsonld files as follows
+
+```
+{
+  "@context": "https://json-ld.org/contexts/person.jsonld",
+  "name": "Manu Sporny",
+  "homepage": "http://manu.sporny.org/",
+  "image": "http://manu.sporny.org/images/manu.png"
+}
+```
+
 
 ## Syntax tokens and keywords
 
