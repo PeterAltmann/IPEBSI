@@ -116,8 +116,11 @@ Inspired from:
 - https://moz.com/blog/writing-structured-data-guide
 - https://www.w3.org/TR/json-ld11/
 - https://www.w3.org/TR/ld-glossary/
+- http://xmlns.com/foaf/spec/
 - https://www.w3.org/TR/rdf11-concepts/
 - https://json-ld.org/playground/ (useful for testing final JSON-LD docs)
+- https://search.google.com/structured-data/testing-tool (test the structured data)
+- https://webcode.tools/json-ld-generator/software-application (generator)
 
 ## Curly braces
 
