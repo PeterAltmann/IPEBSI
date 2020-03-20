@@ -117,6 +117,7 @@ Inspired from:
 - https://www.w3.org/TR/json-ld11/
 - https://www.w3.org/TR/ld-glossary/
 - https://www.w3.org/TR/rdf11-concepts/
+- https://json-ld.org/playground/ (useful for testing final JSON-LD docs)
 
 ## Curly braces
 
