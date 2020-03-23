@@ -121,6 +121,7 @@ Inspired from:
 - https://json-ld.org/playground/ (useful for testing final JSON-LD docs)
 - https://search.google.com/structured-data/testing-tool (test the structured data)
 - https://webcode.tools/json-ld-generator/software-application (generator)
+- https://webcode.tools/json-ld-generator (generator)
 
 ## Curly braces
 
