@@ -27,3 +27,4 @@ Data structures for decentralized systems need to be:
 We need a way to know what data format we are working with. A CID is a content addressing form used by IPLD. A CID contains both a **cryptographic hash digest** of a certain file, as well as a [**codec**](https://github.com/multiformats/multicodec) that tells us how to interpret the associated data.
 
 A CID in IPLD contains the Codec (helps us interpret that data) and the [Multihash](https://github.com/multiformats/multihash) (a hash digest that contains information about what type of hashing function was used to create the given digest) of an object. Using CID, we have a universal identifier for all kinds of formats and protocols that rely on content addressing, e.g., Git and Ethereum.
+
