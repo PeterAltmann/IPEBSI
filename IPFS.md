@@ -30,6 +30,8 @@ A CID in IPLD contains the Codec (helps us interpret that data) and the [Multiha
 
 Using CIDs, we can build data structures that link to other data structures in different formats (e.g., JSON, git commits, Ethereum transaction data etc.).
 
+Text
+
 ## Merkle trees and Directed Acyclic Graphs
 A Merkle tree is a data structure where every node is hashed and linked together using these hashes. A root node is uniquely linked to the data in all the leaf nodes (read more [here](https://en.wikipedia.org/wiki/Merkle_tree)). Relatedly, [Directed Acyclic Graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph) is a specific type of a Merkle tree where different branches in the tree can point at other branches in a single direction (hence directed) without ever pointing to a previous node (hence acyclic). 
 
